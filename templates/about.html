@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}About - AVAE CAPITAL{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>About AVAE Capital</h1>
+    </div>
+</section>
+
+<section class="about-intro">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: start;">
+        <div>
+            <div class="about-text" style="margin-bottom: 40px;">
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; text-align: justify; font-weight: 600; text-align: center;">
+                    AVAE Capital combines several types of professional activities on the securities market.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; text-align: center;">
+                    The company has a licence from the Financial Market Regulation and Supervision Service of the Kyrgyz Republic.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; text-align: justify;">
+                    The license allows AVAE Capital to carry out a wide range of operations in the financial market, including brokerage activities, client asset management and investment consulting. The company is committed to providing its customers with high quality services that meet the highest industry standards.
+                </p>
+            </div>
+
+            <div class="services-grid" style="gap: 30px;">
+                <div style="background: #000; color: #fff; border-radius: 30px; padding: 40px; position: relative; overflow: hidden;">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 24px; font-weight: 700;">Brokerage activities</h3>
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6;">
+                        AVAE Capital, being a licensed professional participant of the financial market, provides access to trade a wide range of financial instruments to different categories of clients (retail / professional client, market counterparty).
+                    </p>
+                    <div style="position: absolute; bottom: -50px; right: -50px; width: 300px; height: 300px; background: rgba(0, 150, 200, 0.3); border-radius: 50%; filter: blur(60px);"></div>
+                </div>
+
+                <div style="background: #000; color: #fff; border-radius: 30px; padding: 40px; position: relative; overflow: hidden;">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 24px; font-weight: 700;">Trust management</h3>
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6;">
+                        AVAE Capital provides a service that allows clients to transfer their assets for management to generate income.
+                    </p>
+                    <div style="position: absolute; bottom: -50px; right: -50px; width: 300px; height: 300px; background: rgba(0, 150, 200, 0.3); border-radius: 50%; filter: blur(60px);"></div>
+                </div>
+
+                <div style="background: #000; color: #fff; border-radius: 30px; padding: 40px; position: relative; overflow: hidden;">
+                    <h3 style="color: #fff; margin-bottom: 20px; font-size: 24px; font-weight: 700;">Dealership activities</h3>
+                    <p style="color: #fff; font-size: 16px; line-height: 1.6;">
+                        AVAE Capital is the nexus for securities purchase and sale transactions.
+                    </p>
+                    <div style="position: absolute; bottom: -50px; right: -50px; width: 300px; height: 300px; background: rgba(0, 150, 200, 0.3); border-radius: 50%; filter: blur(60px);"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-image">
+            <img src="/static/images/image.png" alt="Modern office" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+        </div>
+    </div>
+</section>
+{% endblock %}

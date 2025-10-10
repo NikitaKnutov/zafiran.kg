@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Documents & Licenses - AVAE CAPITAL{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Documents & Licenses</h1>
+    </div>
+</section>
+
+<section style="padding: 80px 0;">
+    <div class="container" style="max-width: 900px;">
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Business conditions</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content" style="display: none;">
+                <div style="padding: 40px; background-color: #ffffff; border-radius: 0 0 12px 12px;">
+                    <p style="margin-bottom: 24px; line-height: 1.7;">The business terms and conditions of FX brokers (forex brokers) typically include several key aspects that govern the interaction between the client and the company. Here are the main points:</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">1. Account types</h3>
+                    <p style="margin-bottom: 16px; line-height: 1.7;">A broker may offer different types of trading accounts with different conditions:</p>
+                    <ul style="margin-left: 24px; margin-bottom: 24px; line-height: 1.7;">
+                        <li style="margin-bottom: 8px;">Standard account is the basic account type for most clients.</li>
+                        <li style="margin-bottom: 8px;">ECN account - direct access to the interbank market through the Electronic Communication Network.</li>
+                        <li style="margin-bottom: 8px;">Segregated accounts - client funds are kept separately from company funds.</li>
+                        <li style="margin-bottom: 8px;">Islamic accounts - no interest charged for carrying positions over the next day (swaps) in accordance with Shariah norms.</li>
+                    </ul>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">2. Spreads and commissions</h3>
+                    <p style="margin-bottom: 16px; line-height: 1.7;">The spread is the difference between the purchase and sale price of a currency. Commission is a fee for conducting a transaction. Conditions may include: A fixed spread is a constant value of the difference between buying and selling.</p>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">Floating spread - varies depending on market conditions. Transaction fees are a fixed amount or percentage of the transaction volume.</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">4. Minimum deposit</h3>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">This is the minimum amount that must be deposited into the trading account to start working. The minimum deposit amount varies depending on the broker and the type of account.</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">5. Margin requirements</h3>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">Margin is the amount of collateral required to open a position. If the margin level falls below a certain level, the broker may require additional funds (margin call).</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">6. Trading tools</h3>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">Various brokers provide access to different currency pairs, as well as other financial instruments such as CFDs on stocks, indices, commodities and cryptocurrencies.</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">7. Trading platforms</h3>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">The main trading platforms such as MetaTrader 4/5, cTrader, and the broker's own developments. Mobile trading applications may also be offered.</p>
+                    
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 32px;">8. Working hours</h3>
+                    <p style="margin-bottom: 24px; line-height: 1.7;">The operating time of the trading platform depends on the operating mode of the global financial markets. Some brokers may provide round-the-clock trading, including weekends.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item" style="margin-top: 24px;">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Licenses</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content" style="display: none;">
+                <div style="padding: 40px; background-color: #ffffff; border-radius: 0 0 12px 12px;">
+                    <p style="margin-bottom: 24px; line-height: 1.7;">Our company operates under the following licenses and regulatory approvals:</p>
+                    
+                    <div style="display: grid; gap: 16px;">
+                        <a href="/static/docs/license-1.pdf" target="_blank" class="pdf-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <span>Financial Services License</span>
+                            <span class="pdf-size">PDF, 2.4 MB</span>
+                        </a>
+                        
+                        <a href="/static/docs/license-2.pdf" target="_blank" class="pdf-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <span>Brokerage Activity License</span>
+                            <span class="pdf-size">PDF, 1.8 MB</span>
+                        </a>
+                        
+                        <a href="/static/docs/license-3.pdf" target="_blank" class="pdf-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <span>Trust Management License</span>
+                            <span class="pdf-size">PDF, 3.1 MB</span>
+                        </a>
+                        
+                        <a href="/static/docs/certificate.pdf" target="_blank" class="pdf-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <span>Registration Certificate</span>
+                            <span class="pdf-size">PDF, 1.2 MB</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('.accordion-icon');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.textContent = '−';
+    } else {
+        content.style.display = 'none';
+        icon.textContent = '+';
+    }
+}
+</script>
+{% endblock %}
