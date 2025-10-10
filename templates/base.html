@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}AVAE CAPITAL - Financial Consulting{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <a href="/">AVAE CAPITAL</a>
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AVAE Capital Logo" style="height: 20px; vertical-align: middle; margin-right: 8px; filter: invert(1);">
+                        AVAE CAPITAL
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="/about" class="nav-link">About</a></li>
