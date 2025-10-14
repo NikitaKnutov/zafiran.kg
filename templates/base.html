@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}AVAE CAPITAL - Financial Consulting{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <title>{% block title %}ZAFIRAN - Финансовые консультации{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
 </head>
 <body>
     <header class="header">
@@ -13,21 +13,25 @@
             <nav class="nav">
                 <div class="logo">
                     <a href="/">
-                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AVAE Capital Logo" style="height: 20px; vertical-align: middle; margin-right: 8px; filter: invert(1);">
-                        AVAE CAPITAL
+                        <img src="/static/images/logo.png" alt="Zafiran Capital Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                        ZAFIRAN
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="/about" class="nav-link">About</a></li>
-                    <li><a href="/services" class="nav-link">Our services</a></li>
-                    <li><a href="/software" class="nav-link">Software</a></li>
-                    <li><a href="/advantages" class="nav-link">Advantages</a></li>
-                    <li><a href="/aml" class="nav-link">AML</a></li>
-                    <li><a href="/team" class="nav-link">Team</a></li>
-                    <li><a href="/documents" class="nav-link">Documents&Licenses</a></li>
-                    <li><a href="/products" class="nav-link">Products&Solutions</a></li>
+                    <li><a href="/services" class="nav-link">Услуги</a></li>
+                    <li><a href="/advantages" class="nav-link">Преимущества</a></li>
+                    <li><a href="/documents" class="nav-link">FAQ и Документы</a></li>
                 </ul>
-                <a href="/contact" class="btn-primary">Contact Us</a>
+                <div class="language-selector">
+                    <button class="lang-btn">Русский ▼</button>
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option">Русский</a>
+                        <a href="#" class="lang-option">English</a>
+                    </div>
+                </div>
+
+                <a href="https://avaecapital.com//form.html" class="btn-secondary">Стать клиентом</a>
+                <a href="https://cabinet.avae.kg/Account/Login/" class="btn-primary">Личный кабинет</a>
             </nav>
         </div>
     </header>
@@ -40,35 +44,46 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <p>720040 Bishkek Kyrgyzstan<br>Razzakova st., 19</p>
+                    <h4>Контакты</h4>
+                    <p>Юридический адрес: Кыргызская Республика, Город Бишкек, Ленинский район, ул. Турусбекова, дом 4, квартира 10  </p>
+                    <p>+996 998 55 68 39<br> info@zafiran.kg</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Navigation</h4>
+                    <h4>Навигация</h4>
                     <ul>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/services">Our services</a></li>
-                        <li><a href="/software">Software</a></li>
-                        <li><a href="/advantages">Advantages</a></li>
-                        <li><a href="/aml">AML</a></li>
+                        <li><a href="/services">Услуги</a></li>
+                        <li><a href="/advantages">Преимущества</a></li>
+                        <li><a href="/licenses">Лицензия</a></li>
+                        <li><a href="/documents">FAQ и Документы</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="/team">Team</a></li>
-                        <li><a href="/documents">Documents&Licenses</a></li>
-                        <li><a href="/products">Products&Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p>+996 998 55 68 39<br>info@avaecapital.com</p>
+                    <h4>Юридическая информация</h4>
+                    <p>Полное наименование: Общество с ограниченной ответственностью "Зафиран"<br>Регистрационный номер: 304684-2301-ООО<br>Киргызская Республика, г. Бишкек</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025</p>
+                <p>&copy; 2025 ZAFIRAN. Все права защищены.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtn = document.querySelector('.lang-btn');
+            const langDropdown = document.querySelector('.lang-dropdown');
+
+            langBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                langDropdown.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.language-selector')) {
+                    langDropdown.classList.remove('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,48 +1,89 @@
 {% extends "base.html" %}
 
-{% block title %}Advantages - AVAE CAPITAL{% endblock %}
+{% block title %}Advantages - ZAFIRAN{% endblock %}
 
 {% block content %}
-<section class="page-hero">
+
+<section class="advantages-hero">
     <div class="container">
-        <h1>Our advantages</h1>
+        <div class="advantages-hero-content">
+            <h2 class="advantages-hero-subtitle">ИСКЛЮЧИТЕЛЬНЫЕ ОСОБЕННОСТИ</h2>
+            <h1 class="advantages-hero-title">Почему мы?</h1>
+            <p class="advantages-hero-description">Узнайте, что делает нас исключительными в финансовой отрасли. Изучите наши преимущества и персонализированные услуги.</p>
+        </div>
     </div>
 </section>
 
-<section class="features">
+<section class="quote-section">
     <div class="container">
-        <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); gap: 40px;">
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 50px 40px; text-align: center;">
-                <div style="margin-bottom: 30px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 6v6l4 2"/>
-                    </svg>
-                </div>
-                <p style="color: #fff; font-size: 16px; line-height: 1.6;">Providing the best prices on G10 currency pairs with the ability to deliver the underlying asset to your accounts</p>
-            </div>
-            
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 50px 40px; text-align: center;">
-                <div style="margin-bottom: 30px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"/>
-                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                    </svg>
-                </div>
-                <p style="color: #fff; font-size: 16px; line-height: 1.6;">Providing a stream of quotes</p>
-            </div>
-            
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 50px 40px; text-align: center;">
-                <div style="margin-bottom: 30px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 16v-4"/>
-                        <path d="M12 8h.01"/>
-                    </svg>
-                </div>
-                <p style="color: #fff; font-size: 16px; line-height: 1.6;">Providing access to offshore liquidity and eFX platforms Liquidity Provider</p>
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-text">"Zafiran изменил мой подход к P2P-торговле и управлению криптовалютным портфелем."</div>
+                <div class="quote-author">— Активный P2P-трейдер</div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="advantages-section">
+    <div class="container">
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <h3>Предоставление лучших котировок по всем видам активов</h3>
+                <p>Мы обеспечиваем лучшие цены на рынке для всех классов активов.</p>
+                <a href="https://avaecapital.com//form.html" class="advantage-link">Узнать больше</a>
+            </div>
+
+            <div class="advantage-card">
+                <h3>Безопасность сделок</h3>
+                <p>Используем верификацию пользователей и систему репутации для защиты каждой транзакции. Ваши средства находятся в безопасности на всех этапах обмена.</p>
+                <a href="https://avaecapital.com//form.html" class="advantage-link">Узнать больше</a>
+            </div>
+
+            <div class="advantage-card">
+                <h3>Поддержка 24/7</h3>
+                <p>Получайте помощь в разрешении споров, технических вопросах и консультации по безопасным сделкам в любое время.</p>
+                <a href="https://avaecapital.com//form.html" class="advantage-link">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-header">
+            <h2 class="partners-title">Бесперебойное подключение к глобальным системам</h2>
+            <p class="partners-description">Наша инфраструктура интегрируется с ведущими криптовалютными биржами, блокчейн-сетями и платежными системами всех популярных валют - от Bitcoin и Ethereum до стейблкоинов и альткоинов, обеспечивая операционную эффективность и безопасность обменов.</p>
+        </div>
+        <div class="partners-logos">
+            <div class="partner-logo">SOL</div>
+            <div class="partner-logo">Dash</div>
+            <div class="partner-logo">XRP</div>
+            <div class="partner-logo">ETH</div>
+            <div class="partner-logo">Bitcoin</div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-content">
+            <div class="stats-header">
+                <h2>УДОВЛЕТВОРЕННОСТЬ ПОЛЬЗОВАТЕЛЯ</h2>
+                <p>Доверие профессионалов и клиентов по всему миру</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item-large">
+                    <div class="stat-number-large">1.5k+</div>
+                    <div class="stat-label-large">Счастливых клиентов</div>
+                </div>
+                <div class="stat-item-large">
+                    <div class="stat-number-large">100+</div>
+                    <div class="stat-label-large">Глобальные Партнеры</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

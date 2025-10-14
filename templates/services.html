@@ -1,68 +1,104 @@
 {% extends "base.html" %}
 
-{% block title %}Our Services - AVAE CAPITAL{% endblock %}
+{% block title %}Our Services - ZAFIRAN{% endblock %}
 
 {% block content %}
-<section class="page-hero">
+
+<section class="services-hero">
     <div class="container">
-        <h1>Our services</h1>
+        <div class="services-hero-content">
+            <h1 class="services-hero-title">Наши услуги для всех видов клиентов</h1>
+            <p class="services-hero-subtitle">Используйте мощь разнообразных инвестиционных инструментов, персонализированного финансового управления и экспертных услуг под одной крышей.</p>
+        </div>
     </div>
 </section>
 
-<section class="about-intro">
+<section class="services-section">
     <div class="container">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <p style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; text-align: justify;">Within the framework of the existing infrastructure and interaction with our partners, we provide the following services to our clients:</p>
-            
-            <p style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; text-align: justify;">Spot currency trading attracts traders due to its accessibility and ability to quickly respond to changes in market conditions. However, it requires a deep understanding of the market and risk management, as volatility can lead to both significant gains and losses.</p>
-            
-            <p style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; text-align: center;">A foreign exchange transaction (or conversion) is a transaction involving the exchange of one currency for another. It is carried out in the foreign exchange market and can include various forms of exchange, such as the purchase of foreign currency to pay for goods and services, hedging currency risks or speculative transactions in order to profit from differences in exchange rates.</p>
-            
-            <p style="font-size: 16px; line-height: 1.8; margin-bottom: 30px; text-align: justify;">Liquidity Transfer is the process of moving funds or other liquid assets between different accounts, divisions or branches within the same financial institution or between different financial institutions. The main purpose of such a transfer is to ensure a sufficient level of liquidity to fulfill obligations to clients, counterparties or regulators.</p>
-            
-            <p style="font-size: 16px; line-height: 1.8; margin-bottom: 60px; text-align: center;">Access to the International EFX Exchange Platform provides financial market participants with the opportunity to transact in foreign currencies in real time. Such platforms bring together buyers and sellers from all over the world, offering a wide selection of currency pairs and convenient trading tools.</p>
-        </div>
-        
-        <div class="services-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 40px; text-align: center;">
-                <div style="margin-bottom: 20px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                         <path d="M7 12h10"/>
                     </svg>
                 </div>
-                <h3 style="color: #fff; font-size: 18px; font-weight: 600;">FX SPOT trading</h3>
+                <h3>Расчеты между экспортерами и импортерами</h3>
+                <p>Услуги по безопасным и быстрым расчетам между экспортерами и импортерами с использованием цифровых активов (BTC, USDT, USDC, ETH и других стейблкоинов)</p>
             </div>
-            
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 40px; text-align: center;">
-                <div style="margin-bottom: 20px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                     </svg>
                 </div>
-                <h3 style="color: #fff; font-size: 18px; font-weight: 600;">Conversion transactions</h3>
+                <h3>Стейкинг и фарминг</h3>
+                <p>Получайте пассивный доход от хранения криптовалют. Гибкие и фиксированные программы стейкинга с доходностью до 20% годовых. Участие в DeFi-протоколах и ликвидных пулах для максимизации прибыли.</p>
             </div>
-            
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 40px; text-align: center;">
-                <div style="margin-bottom: 20px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
                         <path d="M12 6v6l4 2"/>
                     </svg>
                 </div>
-                <h3 style="color: #fff; font-size: 18px; font-weight: 600;">Liquidity transfer</h3>
+                <h3>Маржинальная торговля</h3>
+                <p>Наша инфраструктура позволяет легко отправлять и получать средства, а также отслеживать статусы операций в режиме реального времени. Мы обеспечиваем высокий уровень безопасности, соответствуя международным стандартам.</p>
             </div>
-            
-            <div style="background: #000; color: #fff; border-radius: 20px; padding: 40px; text-align: center;">
-                <div style="margin-bottom: 20px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                         <circle cx="12" cy="10" r="3"/>
                     </svg>
                 </div>
-                <h3 style="color: #fff; font-size: 18px; font-weight: 600;">Access to international eFX platforms and exchanges</h3>
+                <h3>Доступ на международные фондовые рынки</h3>
+                <p>Возможность торговать основными валютными парами и инвестировать в различные финансовые инструменты, такие как акции, облигации, ETF и другие. Актуальная информация о рыночных тенденциях, аналитические инструменты и возможность проводить сделки в реальном времени.</p>
             </div>
+        </div>
+        
+        <div class="services-cta">
+            <a href="https://avaecapital.com//form.html" class="btn-primary">Давай начнем</a>
         </div>
     </div>
 </section>
+
+<section class="products-section">
+    <div class="container">
+        <div class="products-header">
+            <h2>ПРОДУКТЫ И РЕШЕНИЯ</h2>
+            <p class="products-subtitle">Текущие решения для улучшения вашей финансовой стратегии</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>Комплексный продукт</h3>
+                <p>Наши решения включают в себя не только торговые инструменты, но и инфраструктуру для стейкинга, DeFi-протоколы и кроссчейн-мосты.</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Высокая производительность</h3>
+                <p>Наша команда организована так, чтобы справляться с высокочастотной торговлей и большими объемами транзакций в блокчейне с минимальными задержками.</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Взаимодействие с клиентами</h3>
+                <p>Мы помогаем нашим клиентам увеличить прибыль от крипто-трейдинга и стейкинга, а трейдеры, в свою очередь, делятся с нами рыночными инсайтами для создания лучших торговых алгоритмов и DeFi-решений.</p>
+            </div>
+
+            <div class="product-card">
+                <h3>Технологии</h3>
+                <p>Мы очень внимательно относимся к выбору блокчейн-технологий и используем наши знания для подбора наиболее оптимальных протоколов, смарт-контрактов и криптографических решений для максимальной безопасности и доходности.</p>
+            </div>
+        </div>
+
+        <div class="products-cta">
+            <a href="https://avaecapital.com//form.html" class="btn-primary">Стать клиентом</a>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
