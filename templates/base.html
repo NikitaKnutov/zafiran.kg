@@ -18,20 +18,20 @@
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="/services" class="nav-link">Услуги</a></li>
-                    <li><a href="/advantages" class="nav-link">Преимущества</a></li>
-                    <li><a href="/documents" class="nav-link">FAQ и Документы</a></li>
+                    <li><a href="/services" class="nav-link" data-ru="Услуги" data-en="Services">Услуги</a></li>
+                    <li><a href="/advantages" class="nav-link" data-ru="Преимущества" data-en="Advantages">Преимущества</a></li>
+                    <li><a href="/documents" class="nav-link" data-ru="FAQ и Документы" data-en="FAQ & Documents">FAQ и Документы</a></li>
                 </ul>
                 <div class="language-selector">
                     <button class="lang-btn">Русский ▼</button>
                     <div class="lang-dropdown">
-                        <a href="#" class="lang-option">Русский</a>
-                        <a href="#" class="lang-option">English</a>
+                        <a href="#" class="lang-option" data-lang="ru">Русский</a>
+                        <a href="#" class="lang-option" data-lang="en">English</a>
                     </div>
                 </div>
 
-                <a href="https://avaecapital.com//form.html" class="btn-secondary">Стать клиентом</a>
-                <a href="https://cabinet.avae.kg/Account/Login/" class="btn-primary">Личный кабинет</a>
+                <a href="https://client.zafiran.kg/auth/registration" class="btn-secondary" data-ru="Стать клиентом" data-en="Become a Client">Стать клиентом</a>
+                <a href="https://client.zafiran.kg/auth/login" class="btn-primary" data-ru="Личный кабинет" data-en="Client Area">Личный кабинет</a>
             </nav>
         </div>
     </header>
@@ -44,26 +44,26 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <p>Юридический адрес: Кыргызская Республика, Город Бишкек, Ленинский район, ул. Турусбекова, дом 4, квартира 10  </p>
-                    <p>+996 998 55 68 39<br> info@zafiran.kg</p>
+                    <h4 data-ru="Контакты" data-en="Contacts">Контакты</h4>
+                    <p data-ru="Юридический адрес: Кыргызская Республика, 720065, город Бишкек, Свердловский район, проспект Чуй, дом 32а" data-en="Legal address: Kyrgyz Republic, 720065, Bishkek city, Sverdlovsky district, Chui Avenue, building 32a">Юридический адрес: Кыргызская Республика, 720065, город Бишкек, Свердловский район, проспект Чуй, дом 32а</p>
+                    <p>+996555889122<br> manager@zafiran.kg</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Навигация</h4>
+                    <h4 data-ru="Навигация" data-en="Navigation">Навигация</h4>
                     <ul>
-                        <li><a href="/services">Услуги</a></li>
-                        <li><a href="/advantages">Преимущества</a></li>
-                        <li><a href="/licenses">Лицензия</a></li>
-                        <li><a href="/documents">FAQ и Документы</a></li>
+                        <li><a href="/services" data-ru="Услуги" data-en="Services">Услуги</a></li>
+                        <li><a href="/advantages" data-ru="Преимущества" data-en="Advantages">Преимущества</a></li>
+                        <li><a href="/licenses" data-ru="Лицензия" data-en="Licenses">Лицензия</a></li>
+                        <li><a href="/documents" data-ru="FAQ и Документы" data-en="FAQ & Documents">FAQ и Документы</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Юридическая информация</h4>
-                    <p>Полное наименование: Общество с ограниченной ответственностью "Зафиран"<br>Регистрационный номер: 304684-2301-ООО<br>Киргызская Республика, г. Бишкек</p>
+                    <h4 data-ru="Юридическая информация" data-en="Legal Information">Юридическая информация</h4>
+                    <p data-ru="Полное наименование: Общество с ограниченной ответственностью 'Зафиран'. Регистрационный номер: 304684-2301-ООО Киргызская Республика, г. Бишкек" data-en="Full name: Zafiran Limited Liability Company. Registration number: 304684-2301-LLC Kyrgyz Republic, Bishkek">Полное наименование: Общество с ограниченной ответственностью "Зафиран"<br>Регистрационный номер: 304684-2301-ООО<br>Киргызская Республика, г. Бишкек</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ZAFIRAN. Все права защищены.</p>
+                <p>&copy; 2025 ZAFIRAN. <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span></p>
             </div>
         </div>
     </footer>
@@ -72,6 +72,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const langBtn = document.querySelector('.lang-btn');
             const langDropdown = document.querySelector('.lang-dropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
 
             langBtn.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -83,6 +84,42 @@
                     langDropdown.classList.remove('show');
                 }
             });
+
+            langOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    changeLanguage(selectedLang);
+                    langDropdown.classList.remove('show');
+                });
+            });
+
+            function changeLanguage(lang) {
+                const elements = document.querySelectorAll('[data-ru][data-en]');
+                
+                elements.forEach(element => {
+                    if (lang === 'ru') {
+                        element.textContent = element.getAttribute('data-ru');
+                        if (element.hasAttribute('placeholder')) {
+                            element.setAttribute('placeholder', element.getAttribute('data-ru'));
+                        }
+                    } else if (lang === 'en') {
+                        element.textContent = element.getAttribute('data-en');
+                        if (element.hasAttribute('placeholder')) {
+                            element.setAttribute('placeholder', element.getAttribute('data-en'));
+                        }
+                    }
+                });
+
+                langBtn.textContent = lang === 'ru' ? 'Русский ▼' : 'English ▼';
+                
+                document.documentElement.lang = lang;
+                
+                localStorage.setItem('preferred-language', lang);
+            }
+
+            const savedLang = localStorage.getItem('preferred-language') || 'ru';
+            changeLanguage(savedLang);
         });
     </script>
 </body>

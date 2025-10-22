@@ -1,3 +1,169 @@
+
+
+
+
+/* Секция бегущей строки AML для крипто-операций */
+.crypto-aml-section {
+  padding: 30px 0;
+  background: linear-gradient(125deg, #068f66 10%, #050507 90%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.crypto-aml-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.crypto-aml-marquee {
+  display: flex;
+  width: max-content;
+}
+
+.crypto-aml-marquee-content {
+  display: flex;
+  animation: cryptoAmlMarquee 70s linear infinite;
+  padding: 12px 0;
+  gap: 25px;
+}
+
+.crypto-aml-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(6, 143, 102, 0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.crypto-aml-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(6, 143, 102, 0.4);
+}
+
+.crypto-aml-icon {
+  width: 36px;
+  height: 36px;
+  background: #068f66;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(6, 143, 102, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.crypto-aml-item span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@keyframes cryptoAmlMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Градиентные маски по краям */
+.crypto-aml-marquee-container::before,
+.crypto-aml-marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Адаптивность для бегущей строки крипто-AML */
+@media (max-width: 768px) {
+  .crypto-aml-section {
+    padding: 20px 0;
+  }
+  
+  .crypto-aml-marquee-content {
+    gap: 20px;
+    animation-duration: 35s;
+    padding: 10px 0;
+  }
+  
+  .crypto-aml-item {
+    padding: 8px 16px;
+    margin: 0 6px;
+  }
+  
+  .crypto-aml-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .crypto-aml-item span {
+    font-size: 13px;
+  }
+  
+  .crypto-aml-marquee-container::before,
+  .crypto-aml-marquee-container::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-aml-section {
+    padding: 15px 0;
+  }
+  
+  .crypto-aml-marquee-content {
+    gap: 15px;
+    animation-duration: 30s;
+    padding: 8px 0;
+  }
+  
+  .crypto-aml-item {
+    padding: 6px 12px;
+    margin: 0 4px;
+    border-radius: 20px;
+  }
+  
+  .crypto-aml-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  
+  .crypto-aml-item span {
+    font-size: 12px;
+  }
+  
+  .crypto-aml-marquee-container::before,
+  .crypto-aml-marquee-container::after {
+    width: 40px;
+  }
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
